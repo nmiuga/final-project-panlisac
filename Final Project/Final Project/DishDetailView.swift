@@ -67,6 +67,7 @@ struct DishDetailView: View {
                                         .font(.headline)
                                 }
                                 .buttonStyle(.borderedProminent)
+                                .shadow(color: .gray, radius: 4)
                             }
                         }
                         
