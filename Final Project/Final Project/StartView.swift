@@ -42,6 +42,7 @@ struct StartView: View {
                         .foregroundColor(.black)
                         .cornerRadius(50)
                         .padding([.top], 20)
+                        .shadow(color: .gray, radius: 5)
                     }
                 }
             }
