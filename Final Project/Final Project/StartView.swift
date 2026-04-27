@@ -19,7 +19,7 @@ struct StartView: View {
                 
                 VStack(spacing: 20) {
                     // Image
-                    Image("potato")
+                    Image("potatoland-icon")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 300, height: 300)
