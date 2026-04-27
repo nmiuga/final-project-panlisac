@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1A942272F9FC14000BE1B34 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F1A942252F9FC13F00BE1B34 /* README.md */; };
 		F1A942282F9FC14000BE1B34 /* prompt.md in Resources */ = {isa = PBXBuildFile; fileRef = F1A942242F9FC13F00BE1B34 /* prompt.md */; };
 		F1A942292F9FC14000BE1B34 /* reflection.md in Resources */ = {isa = PBXBuildFile; fileRef = F1A942262F9FC13F00BE1B34 /* reflection.md */; };
 		F1A9422A2F9FC14000BE1B34 /* edits.md in Resources */ = {isa = PBXBuildFile; fileRef = F1A942232F9FC13F00BE1B34 /* edits.md */; };
 		F1A942312F9FC74B00BE1B34 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A9422F2F9FC74B00BE1B34 /* home.png */; };
+		F1A942332F9FCA5500BE1B34 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F1A942322F9FCA5500BE1B34 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,9 @@
 		F199E53D2F8D50A7008EB713 /* Final ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Final ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A942232F9FC13F00BE1B34 /* edits.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = edits.md; sourceTree = "<group>"; };
 		F1A942242F9FC13F00BE1B34 /* prompt.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = prompt.md; sourceTree = "<group>"; };
-		F1A942252F9FC13F00BE1B34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F1A942262F9FC13F00BE1B34 /* reflection.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = reflection.md; sourceTree = "<group>"; };
 		F1A9422F2F9FC74B00BE1B34 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		F1A942322F9FCA5500BE1B34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -93,8 +93,8 @@
 				F199E5402F8D50A7008EB713 /* Final ProjectUITests */,
 				F1A942232F9FC13F00BE1B34 /* edits.md */,
 				F1A942242F9FC13F00BE1B34 /* prompt.md */,
-				F1A942252F9FC13F00BE1B34 /* README.md */,
 				F1A942262F9FC13F00BE1B34 /* reflection.md */,
+				F1A942322F9FCA5500BE1B34 /* README.md */,
 				F1A942302F9FC74B00BE1B34 /* assets */,
 				F199E5272F8D50A5008EB713 /* Products */,
 			);
@@ -238,9 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1A942272F9FC14000BE1B34 /* README.md in Resources */,
 				F1A942312F9FC74B00BE1B34 /* home.png in Resources */,
 				F1A942282F9FC14000BE1B34 /* prompt.md in Resources */,
+				F1A942332F9FCA5500BE1B34 /* README.md in Resources */,
 				F1A942292F9FC14000BE1B34 /* reflection.md in Resources */,
 				F1A9422A2F9FC14000BE1B34 /* edits.md in Resources */,
 			);
