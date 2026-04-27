@@ -2,3 +2,5 @@
 # Potatoland
 
 A native potato dish recommendations app where users can search through collections of potato dishes, leave their own ratings and comments, and share their thoughts about each dish.
+
+![Home screen](assets/home)
