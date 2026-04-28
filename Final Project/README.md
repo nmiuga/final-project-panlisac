@@ -6,5 +6,6 @@ A native potato dish recommendations app where users can search through collecti
 ## Screenshots
 ![Home screen](assets/home.png)
 ![List item - French fries](assets/fries.png)
+![Tag view](assets/tags.png)
 
 ## What It Does
