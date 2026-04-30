@@ -10,6 +10,7 @@ import Combine
 
 struct ContentView: View {
     @StateObject private var store = DishStore()
+    @State private var showingAddDish = false
 
     var body: some View {
         NavigationView {
@@ -20,11 +21,19 @@ struct ContentView: View {
                 List(store.dishes) { dish in
                     NavigationLink(destination: DishDetailView(dish: dish).environmentObject(store)) {
                         HStack(spacing: 12) {
-                            Image(dish.imageName)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 56, height: 56)
-                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                            Group {
+                                if let data = dish.uiImageData, let uiImage = UIImage(data: data) {
+                                    Image(uiImage: uiImage)
+                                        .resizable()
+                                        .scaledToFill()
+                                } else {
+                                    Image(dish.imageName)
+                                        .resizable()
+                                        .scaledToFill()
+                                }
+                            }
+                            .frame(width: 56, height: 56)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
 
                             VStack(alignment: .leading, spacing: 4) {
                                 HStack {
@@ -50,6 +59,18 @@ struct ContentView: View {
                 .scrollContentBackground(.hidden)
                 .background(Color.clear)
                 .navigationTitle("Potato Dishes")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: { showingAddDish = true }) {
+                            Image(systemName: "plus")
+                        }
+                        .accessibilityLabel("Add potato dish")
+                    }
+                }
+                .sheet(isPresented: $showingAddDish) {
+                    AddDishView()
+                        .environmentObject(store)
+                }
             }
         }
     }

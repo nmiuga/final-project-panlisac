@@ -4,8 +4,9 @@
 A native potato dish recommendations app where users can search through collections of potato dishes, leave their own ratings and comments, and share their thoughts about each dish.
 
 ## Screenshots
-![Home screen](assets/home.png)
+![Start screen](assets/start.png)
+![Upload overlay](assets/upload-overlay.png)
 ![List item - French fries](assets/fries.png)
-![Tag view](assets/tags.png)
 
 ## What It Does
+Ideally, this app would be like a social media platform where users can share their own potato dishes and leave ratings and comments on other uses' recommendations. For the scope of this project, I created the app as if it were viewed from one user's perspective.

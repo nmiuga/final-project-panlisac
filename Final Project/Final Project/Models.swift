@@ -30,14 +30,17 @@ struct Dish: Identifiable, Hashable, Codable {
     var shortDescription: String
     // Image name placeholder; replace with your asset names
     var imageName: String
+    // Optional raw image data for user-added dishes
+    var uiImageData: Data?
     var tags: [DishTag]
     var link: String
 
-    init(id: UUID = UUID(), name: String, shortDescription: String, imageName: String, tags: [DishTag], link: String) {
+    init(id: UUID = UUID(), name: String, shortDescription: String, imageName: String, uiImageData: Data? = nil, tags: [DishTag], link: String) {
         self.id = id
         self.name = name
         self.shortDescription = shortDescription
         self.imageName = imageName
+        self.uiImageData = uiImageData
         self.tags = tags
         self.link = link
     }
@@ -94,6 +97,10 @@ final class DishStore: ObservableObject {
 
     func dishes(with tag: DishTag) -> [Dish] {
         dishes.filter { $0.tags.contains(tag) }
+    }
+    
+    func addDish(_ dish: Dish) {
+        dishes.insert(dish, at: 0)
     }
 }
 
