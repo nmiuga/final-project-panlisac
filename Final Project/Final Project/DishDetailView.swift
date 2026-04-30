@@ -18,12 +18,20 @@ struct DishDetailView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     // Card container
                     VStack(alignment: .leading, spacing: 12) {
-                        // Image placeholder
-                        Image(dish.imageName)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(height: 200)
-                            .clipShape(RoundedRectangle(cornerRadius: 16))
+                        // Image (prefer user-uploaded image if available)
+                        Group {
+                            if let data = dish.uiImageData, let uiImage = UIImage(data: data) {
+                                Image(uiImage: uiImage)
+                                    .resizable()
+                                    .scaledToFill()
+                            } else {
+                                Image(dish.imageName)
+                                    .resizable()
+                                    .scaledToFill()
+                            }
+                        }
+                        .frame(height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
 
                         // Title / Heading in accent color with custom font placeholder
                         Text(dish.name)
