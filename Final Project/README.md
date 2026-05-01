@@ -9,7 +9,7 @@ A native potato dish sharing/recommendations app where users can interact with a
 ![List item - French fries](assets/fries.png)
 
 ## What It Does
-Ideally, this app would be like a social media platform where users can share their own potato dishes and leave ratings and comments on other users' recommendations. For the scope of this project, I created the app as if it were viewed from one user's perspective - the interactive features are still present. When this app is launched, users are greeted by the start screen, where they are greeted by the mascot and a message. Users tap the "get started" button - in this case they are taken straight to their homepage, which is a list of potato dishes.
+Ideally, this app would be like a social media platform where users can share their own potato dishes and leave ratings and comments on other users' recommendations. For the scope of this project, I created the app as if it were viewed from one user's perspective - the interactive features are still present. When this app is launched, users are greeted by the start screen, where they are greeted by the mascot and a message. Users tap the "get started" button - in this case they are taken straight to their homepage, which is a list of potato dishes that they can scroll through.
 
 ## Features
 - **External recipe links:** This takes you to a dish's recipe, which launches in the user's default browser.
