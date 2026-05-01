@@ -5,13 +5,20 @@ A native potato dish recommendations app where users can search through collecti
 
 ## Screenshots
 ![Start screen](assets/start.png)
-![Upload overlay](assets/upload-overlay.png)
+![Upload overlay](assets/upload.png)
 ![List item - French fries](assets/fries.png)
 
 ## What It Does
 Ideally, this app would be like a social media platform where users can share their own potato dishes and leave ratings and comments on other uses' recommendations. For the scope of this project, I created the app as if it were viewed from one user's perspective.
 
 ## Features
+- **"Add to favorites" button:** This allows users to "save" their favorite dishes by favoriting them, which is indicated by a filled heart symbol on the homepage list view.
+-**Ratings:** Users can leave their ratings by tapping on the stars on each dish's detailed view. Half star ratings are supported on this app.
+-**Comments text input:"** Users can leave their own comments, which ideally would be visible to other users on this app.
+--**Category tags:** Tags help users find potato dishes of certain categories, making the search process a lot smoother.
 
 ## Brief Setup Instructions
-This app is very straightforward - on the start screen, just tap the "get started" button to access the main content.
+1. Clone this repository.
+2. Locate the **Final Project.xcodeproj** file.
+3. Open **Final Project.xcodeproj** in Xcode. Make sure you have the latest version of Swift installed.
+4. Run the app and wait for it to load on the simulator.
