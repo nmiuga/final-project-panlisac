@@ -33,15 +33,18 @@ struct Dish: Identifiable, Hashable, Codable {
     // Optional raw image data for user-added dishes
     var uiImageData: Data?
     var tags: [DishTag]
+    // Free-form user-defined categories
+    var customTags: [String]
     var link: String
 
-    init(id: UUID = UUID(), name: String, shortDescription: String, imageName: String, uiImageData: Data? = nil, tags: [DishTag], link: String) {
+    init(id: UUID = UUID(), name: String, shortDescription: String, imageName: String, uiImageData: Data? = nil, tags: [DishTag], customTags: [String] = [], link: String) {
         self.id = id
         self.name = name
         self.shortDescription = shortDescription
         self.imageName = imageName
         self.uiImageData = uiImageData
         self.tags = tags
+        self.customTags = customTags
         self.link = link
     }
 }

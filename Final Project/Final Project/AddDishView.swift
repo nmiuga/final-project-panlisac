@@ -10,6 +10,7 @@ struct AddDishView: View {
     @State private var shortDescription: String = ""
     @State private var link: String = ""
     @State private var selectedTags: Set<DishTag> = []
+    @State private var typedTags: String = ""
 
     // Photo picker
     @State private var selectedItem: PhotosPickerItem?
@@ -63,7 +64,13 @@ struct AddDishView: View {
                 }
 
                 Section(header: Text("Categories")) {
-                    TagSelectionView(selected: $selectedTags)
+                    TextField("Type categories (comma-separated)", text: $typedTags, axis: .vertical)
+                        .lineLimit(1...3)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                    Text("Example: fried, baked, cheesy")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
                 }
             }
             .navigationTitle("New Potato Dish")
@@ -91,11 +98,26 @@ struct AddDishView: View {
             shortDescription: shortDescription.trimmingCharacters(in: .whitespacesAndNewlines),
             imageName: fallbackImageName,
             uiImageData: imageData,
-            tags: Array(selectedTags),
+            tags: Array(parseTypedTags().union(selectedTags)),
+            customTags: parseCustomTags(),
             link: link.trimmingCharacters(in: .whitespacesAndNewlines)
         )
         store.addDish(dish)
         dismiss()
+    }
+
+    private func parseTypedTags() -> Set<DishTag> {
+        Set(typedTags
+            .split(separator: ",")
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .compactMap { DishTag(rawValue: $0) })
+    }
+
+    private func parseCustomTags() -> [String] {
+        typedTags
+            .split(separator: ",")
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
     }
 }
 
@@ -163,3 +185,4 @@ private struct FlowLayoutHStack<Content: View>: View {
         }
     }
 }
+

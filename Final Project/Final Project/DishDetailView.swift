@@ -85,6 +85,7 @@ struct DishDetailView: View {
                                 .font(.headline)
                                 .padding([.top], 10)
                             HStack(spacing: 10) {
+                                // Enum-backed tags (navigate to TagView)
                                 ForEach(dish.tags) { tag in
                                     NavigationLink(destination: TagView(tag: tag).environmentObject(store)) {
                                         Text(tag.displayName)
@@ -95,6 +96,16 @@ struct DishDetailView: View {
                                             .foregroundColor(.black)
                                             .clipShape(Capsule())
                                     }
+                                }
+                                // Custom string tags (non-navigable)
+                                ForEach(dish.customTags, id: \.self) { custom in
+                                    Text(custom)
+                                        .font(.subheadline)
+                                        .padding(.horizontal, 10)
+                                        .padding(.vertical, 6)
+                                        .background(Color.gray.opacity(0.15))
+                                        .foregroundColor(.black)
+                                        .clipShape(Capsule())
                                 }
                             }
                         }
