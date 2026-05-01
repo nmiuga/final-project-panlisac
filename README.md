@@ -20,6 +20,6 @@ Ideally, this app would be like a social media platform where users can share th
 
 ## Brief Setup Instructions
 1. Clone this repository.
-2. Locate the FinalProject.xcodeproj file.
-2. Open the FinalProject.xcodeproj file in Xcode. Make sure the latest version of Swift is installed.
+2. Locate the **FinalProject.xcodeproj** file.
+2. Open the **FinalProject.xcodeproj** file in Xcode. Make sure the latest version of Swift is installed.
 3. Run the app and wait for it to load on your selected device simulator.
