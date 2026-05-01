@@ -4,7 +4,9 @@
 A native potato dish sharing/recommendations app where users can interact with a collection of potato dishes, or upload and share their own.
 
 ## Screenshots
-![Start screen](assets/start.png) ![Upload overlay](assets/upload-overlay.png) ![List item - French fries](assets/fries.png)
+![Start screen](assets/start.png)
+![Upload overlay](assets/upload.png)
+![List item - French fries](assets/fries.png)
 
 ## What It Does
 Ideally, this app would be like a social media platform where users can share their own potato dishes and leave ratings and comments on other users' recommendations. For the scope of this project, I created the app as if it were viewed from one user's perspective - the interactive features are still present.
