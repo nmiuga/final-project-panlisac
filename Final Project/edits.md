@@ -1,5 +1,3 @@
-# edits.md
-
 1. Imported Combine
 2. Fixed errors
 3. Fixed image names to make them visible
@@ -18,3 +16,4 @@
 16. Adjusted the comments text box styles
 17. Added a drop shadow to start screen button
 18. Added app icon
+19. Added an upload dish overlay
