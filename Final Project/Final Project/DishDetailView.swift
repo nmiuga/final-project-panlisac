@@ -30,7 +30,7 @@ struct DishDetailView: View {
                                     .scaledToFill()
                             }
                         }
-                        .frame(height: 200)
+                        .frame(maxWidth: .infinity, maxHeight: 200)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
 
                         // Title / Heading in accent color with custom font placeholder

@@ -6,7 +6,7 @@ import Combine
 
 // MARK: - Tag model
 enum DishTag: String, CaseIterable, Identifiable, Codable {
-    case baked, fried, casserole, snack, cooked, breakfast
+    case baked, fried, casserole, snack, cooked, breakfast, dessert
     var id: String { rawValue }
 
     var displayName: String { rawValue.capitalized }
@@ -17,9 +17,10 @@ enum DishTag: String, CaseIterable, Identifiable, Codable {
         case .baked: return .orange
         case .fried: return .yellow
         case .casserole: return .teal
-        case .snack: return .purple
-        case .cooked: return .pink
+        case .snack: return .blue
+        case .cooked: return .purple
         case .breakfast: return .green
+        case .dessert: return .pink
         }
     }
 }
@@ -120,6 +121,7 @@ enum SampleData {
         Dish(name: "Scalloped Potatoes", shortDescription: "Layered potatoes baked in creamy sauce.", imageName: "scalloped-potatoes", tags: [.casserole, .baked], link: "https://iambaker.net/scalloped-potatoes/"),
         Dish(name: "Potato Chips", shortDescription: "Thin, crunchy potato slices.", imageName: "chips", tags: [.fried, .snack], link: "https://www.allrecipes.com/recipe/73135/homestyle-potato-chips/"),
         Dish(name: "Hash Browns", shortDescription: "Shredded potatoes pan-fried until crisp.", imageName: "hash-brown", tags: [.fried, .breakfast], link: "https://www.everydayfamilycooking.com/hash-browns/"),
+        Dish(name: "Ice Cream Potato", shortDescription: "Not a real potato, but might just be better than the real thing.", imageName: "ice-cream-potato", tags: [.dessert], link: "https://spoonuniversity.com/school/northeastern/ice-cream-potato/")
     ]
 }
 
