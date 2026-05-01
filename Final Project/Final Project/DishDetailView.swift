@@ -144,12 +144,15 @@ struct DishDetailView: View {
                             .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
                     )
                 }
-                .padding()
+                .padding(.horizontal, 16)
+                .padding(.vertical)
             }
             .navigationTitle(dish.name)
             .navigationBarTitleDisplayMode(.inline)
             
         }
+        .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
+        .listRowBackground(Color.clear)
     }
 }
 

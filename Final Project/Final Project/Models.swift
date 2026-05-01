@@ -6,7 +6,7 @@ import Combine
 
 // MARK: - Tag model
 enum DishTag: String, CaseIterable, Identifiable, Codable {
-    case baked, fried, casserole, snack, cooked
+    case baked, fried, casserole, snack, cooked, breakfast
     var id: String { rawValue }
 
     var displayName: String { rawValue.capitalized }
@@ -19,6 +19,7 @@ enum DishTag: String, CaseIterable, Identifiable, Codable {
         case .casserole: return .teal
         case .snack: return .purple
         case .cooked: return .pink
+        case .breakfast: return .green
         }
     }
 }
@@ -118,7 +119,7 @@ enum SampleData {
         Dish(name: "Roasted Potatoes", shortDescription: "Herb-roasted, crispy-on-the-outside potatoes.", imageName: "roasted-potatoes", tags: [.baked], link: "https://www.spendwithpennies.com/simple-herb-oven-roasted-potatoes/"),
         Dish(name: "Scalloped Potatoes", shortDescription: "Layered potatoes baked in creamy sauce.", imageName: "scalloped-potatoes", tags: [.casserole, .baked], link: "https://iambaker.net/scalloped-potatoes/"),
         Dish(name: "Potato Chips", shortDescription: "Thin, crunchy potato slices.", imageName: "chips", tags: [.fried, .snack], link: "https://www.allrecipes.com/recipe/73135/homestyle-potato-chips/"),
-        Dish(name: "Hash Browns", shortDescription: "Shredded potatoes pan-fried until crisp.", imageName: "hash-brown", tags: [.fried, .snack], link: "https://www.everydayfamilycooking.com/hash-browns/")
+        Dish(name: "Hash Browns", shortDescription: "Shredded potatoes pan-fried until crisp.", imageName: "hash-brown", tags: [.fried, .breakfast], link: "https://www.everydayfamilycooking.com/hash-browns/"),
     ]
 }
 
