@@ -4,7 +4,7 @@
 A native potato dish sharing/recommendations app where users can interact with a collection of potato dishes, or upload and share their own.
 
 ## Screenshots
-![Start screen](assets/start.jpg)
+![Start screen](assets/start.png)
 ![Upload overlay](assets/upload.png)
 ![List item - French fries](assets/fries.png)
 
